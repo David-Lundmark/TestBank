@@ -15,6 +15,7 @@ namespace TestBank.Models
         public decimal PreBalance { get; set; }
         [Required]
         public decimal PostBalance { get; set; }
+        public int AccountId { get; set; }
 
         [ForeignKey("AccountId")]
         public virtual Account Account { get; set; }

@@ -12,12 +12,13 @@ namespace TestBank.Models
         }
 
         [Key]
-        public int AccountI { get; set; }
+        public int AccountId { get; set; }
 
         [Required]
         public decimal Balance { get; set; }
         [Required]
         public bool Locked { get; set; }
+        public int OwnerId { get; set; }
 
         [ForeignKey("OwnerId")]
         public virtual Owner Owner { get; set; }
