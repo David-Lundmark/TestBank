@@ -14,10 +14,13 @@ namespace TestBank.Models
         [Key]
         public int AccountId { get; set; }
 
+        [Required, MaxLength(60)]
+        public string Name { get; set; }
         [Required]
         public decimal Balance { get; set; }
         [Required]
         public bool Locked { get; set; }
+
         public int OwnerId { get; set; }
 
         [ForeignKey("OwnerId")]

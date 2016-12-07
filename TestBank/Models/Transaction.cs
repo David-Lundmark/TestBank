@@ -12,12 +12,10 @@ namespace TestBank.Models
         [Required]
         public DateTime Timestamp { get; set; }
         [Required]
-        public decimal PreBalance { get; set; }
+        public decimal Amount { get; set; }
         [Required]
-        public decimal PostBalance { get; set; }
-        public int AccountId { get; set; }
-
-        [ForeignKey("AccountId")]
-        public virtual Account Account { get; set; }
+        public int FromAccount { get; set; }
+        [Required]
+        public int ToAccount { get; set; }
     }
 }
